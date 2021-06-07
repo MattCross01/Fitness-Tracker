@@ -10,6 +10,8 @@
 
 ## Usage 
 
+This application was made to track your progress of exercises. You can add new exercises with options such as Exercise Type, Exercise Name, Weight, Sets, Reps, Duration. You can also access your previous workouts and continue from where you left off. There is also a stats page that tracks your progress through the week.
+
 Clone the repo, navigate to the root folder, run the following commands from the CLI:     
 
 Run Test;    
