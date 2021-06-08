@@ -1,38 +1,26 @@
-const API = {
-    async getLastWorkout() {
-      const res = await fetch("/api/workouts");
-      const json = await res.json();
+const API={async getLastWorkout()
+ 
+  {const t=await fetch("/api/workouts")
+ 
+  ,a=await t.json();return a[a.length-1]},
   
-      return json[json.length - 1];
-    },
-    async addExercise(data) {
-      const id = location.search.split("=")[1];
+  async addExercise(t){const a=location.search.split("=")
   
-      const res = await fetch("/api/workouts/" + id, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
+  [1],o=await fetch("/api/workouts/"+a,
   
-      const json = await res.json();
+  {method:"PUT",headers:{"Content-Type":"application/json"},
   
-      return json;
-    },
-    async createWorkout() {
-      const res = await fetch("/api/workouts", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" }
-      });
+  body:JSON.stringify(t)})
+  ;return await o.json()}
   
-      const json = await res.json();
+  ,async createWorkout()
   
-      return json;
-    },
+  {const t=await fetch("/api/workouts",
   
-    async getWorkoutsInRange() {
-      const res = await fetch(`/api/workouts/range`);
-      const json = await res.json();
-      
-      return json;
-    },
-  };
+  {method:"POST",headers:{"Content-Type":"application/json"}});
+  
+  return await t.json()}
+  
+  ,async getWorkoutsInRange()
+  
+  {const t=await fetch("/api/workouts/range");return await t.json()}};
