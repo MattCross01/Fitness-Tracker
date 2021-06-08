@@ -1,20 +1,16 @@
-//requiring express, path 
-const path = require('path');
-const express = require('express');
-const router = express.Router();
+// ===============================================================================
+// DEPENDENCIES
+// We need to include the path package to get the correct file path for our html
+// ===============================================================================
+var path = require("path");
 
-
-//get index.html page
-router.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname,"../public/index.html"));
-});
-
-router.get('/exercise',(req,res) => {
-    res.sendFile(path.join(__dirname,"../public/exercise.html"));
-});
-
-router.get('/stats', (req, res) => {
+module.exports = function(app) {
+  // Called when "Countinue Workout" or "new Workout" is clicked in index.html
+  app.get("/exercise", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/exercise.html"));
+  });
+  // Not quite sure what this is used for yet ....
+  app.get("/stats", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/stats.html"));
-});
-
-module.exports = router;
+  });
+};
