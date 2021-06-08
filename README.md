@@ -14,9 +14,6 @@ This application was made to track your progress of exercises. You can add new e
 
 Clone the repo, navigate to the root folder, run the following commands from the CLI:     
 
-Run Test;    
-`npm run test`     
-
 Seed DB;   
 `npm run seed`     
 
