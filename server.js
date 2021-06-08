@@ -1,23 +1,20 @@
-const express = require("express");
-const logger = require("morgan");
-const mongoose = require("mongoose");
+const express=require("express"),
+logger=require("morgan"),
+mongoose=require("mongoose"),
 
-const PORT = process.env.PORT || 3000;
+PORT=process.env.PORT||3e3,app=express();
 
-const app = express();
+app.use(logger("dev")),
+app.use(express.urlencoded({extended:!0})),
+app.use(express.json()),
+app.use(express.static("public")),
 
-app.use(logger("dev"));
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-app.use(express.static("public"));
+mongoose.connect(process.env.MONGODB_URI||"mongodb://localhost/workout",
+{useNewUrlParser:!0});
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", { useNewUrlParser: true });
+const db=require("./models");
+require("./routes/apiRoutes")(app),
+require("./routes/htmlRoutes")(app),
 
-const db = require("./models");
-
-require("./routes/apiRoutes")(app);
-require("./routes/htmlRoutes")(app);
-
-app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
-});
+app.listen(PORT,()=>
+{console.log(`App running on port ${PORT}!`)});
