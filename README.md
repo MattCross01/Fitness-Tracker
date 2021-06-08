@@ -6,7 +6,7 @@
 * [License](#license)
 * [Documentation](#documentation)
 
-- Link to live application: https://techbloghwv3.herokuapp.com/
+- Link to live application: Coming Soon
 
 ## Usage 
 
@@ -56,9 +56,7 @@ Mongo Database Table:
 
 ## Documentation
 
-Live Deployed Application: [View Application](https://techbloghwv3.herokuapp.com/ "Live Deploy")      
-
-![Screenshot](https://i.ibb.co/mqv8XSH/fwefwe.png "Proof of Application")      
+Link to deployed application coming soon 
 
 ## Questions
 
