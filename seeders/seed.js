@@ -23,7 +23,6 @@ let workoutSeed=[{day:(new Date).setDate((new Date).getDate()-10),
     sets:4}]},
     
     {day:(new Date).setDate((new Date).getDate()-8),
-      
       exercises:[{type:"resistance",name:"Push Press",
        duration:25,
        weight:185,
