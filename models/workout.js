@@ -2,11 +2,16 @@ const mongoose=require("mongoose"),
 
 Schema = mongoose.Schema,
 
-workoutSchema=new Schema({day:{type:Date,default:Date.now},
+workoutSchema=new Schema({
+  day:{
+    type:Date,default:Date.now},
  
   exercises:[{type:{type:String,trim:!0,
   required:"Enter an exercise type"},
-  name:{type:String,trim:!0,required:"Enter an exercise name"},
+  name:{
+    type:String,
+    trim:!0,
+    required:"Enter an exercise name"},
   duration:{type:Number,
   required:"Enter an exercise duration in minutes"},
   weight:{type:Number},

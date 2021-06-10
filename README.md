@@ -6,7 +6,7 @@
 * [License](#license)
 * [Documentation](#documentation)
 
-- Link to live application: Coming Soon
+- Link to live application: https://appfitness-tracker.herokuapp.com/?id=60c23f30740f00001551dd7c
 
 ## Usage 
 
@@ -53,7 +53,7 @@ Mongo Database Table:
 
 ## Documentation
 
-Link to deployed application coming soon 
+Link to deployed application: https://appfitness-tracker.herokuapp.com/?id=60c23f30740f00001551dd7c
 
 ## Questions
 
